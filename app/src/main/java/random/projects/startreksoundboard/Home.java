@@ -29,17 +29,8 @@ public class Home extends Activity {
                 System.out.println("sessionId" + audioSessionId);
                 int duration = mediaPlayerEngage.getDuration();
 
-                if (mediaPlayerEngage.isPlaying()) {
-                    System.out.println("media player is playing");
-                    return;
-                }
                 mediaPlayerEngage.start();
                 System.out.println("duration track: " + duration);
-            }
-        });kill.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                if (mediaPlayerEngage.isPlaying()&&mediaPlayerBorg1) {
-mediaPlayerBorg1.stop();mediaPlayerEngage.stop();
             }
         });
 
@@ -52,13 +43,20 @@ mediaPlayerBorg1.stop();mediaPlayerEngage.stop();
                 System.out.println("sessionId" + audioSessionId);
                 int duration = mediaPlayerBorg1.getDuration();
 
-                if (mediaPlayerBorg1.isPlaying()) {
-                    System.out.println("media player is playing");
-                    return;
-                }
                 mediaPlayerBorg1.start();
                 System.out.println("duration track: " + duration);
 
+            }
+        });
+        kill.setOnClickListener(new View.OnClickListener() {
+
+            public void onClick(View v) {
+                if (mediaPlayerEngage.isPlaying()) {
+                    mediaPlayerEngage.stop();
+                }
+                if (mediaPlayerBorg1.isPlaying()) {
+                    mediaPlayerBorg1.stop();
+                }
             }
         });
     }
