@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import java.io.IOException;
+
 public class Home extends Activity {
 
     private static final String TAG = "MyActivity";
@@ -29,6 +31,10 @@ public class Home extends Activity {
                 System.out.println("sessionId" + audioSessionId);
                 int duration = mediaPlayerEngage.getDuration();
 
+                if (mediaPlayerEngage.isPlaying()) {
+                    System.out.println("media player is playing");
+                    return;
+                }
                 mediaPlayerEngage.start();
                 System.out.println("duration track: " + duration);
             }
@@ -43,19 +49,24 @@ public class Home extends Activity {
                 System.out.println("sessionId" + audioSessionId);
                 int duration = mediaPlayerBorg1.getDuration();
 
+                if (mediaPlayerBorg1.isPlaying()) {
+                    System.out.println("media player is playing");
+                    return;
+                }
                 mediaPlayerBorg1.start();
                 System.out.println("duration track: " + duration);
-
             }
         });
         kill.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View v) {
                 if (mediaPlayerEngage.isPlaying()) {
-                    mediaPlayerEngage.stop();
+                    mediaPlayerEngage.pause();
+                    mediaPlayerEngage.seekTo(0);
                 }
                 if (mediaPlayerBorg1.isPlaying()) {
-                    mediaPlayerBorg1.stop();
+                    mediaPlayerBorg1.pause();
+                    mediaPlayerBorg1.seekTo(0);
                 }
             }
         });
