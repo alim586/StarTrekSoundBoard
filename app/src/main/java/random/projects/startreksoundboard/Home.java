@@ -17,6 +17,7 @@ public class Home extends Activity {
 
         final Button engage = findViewById(R.id.engage);
         final Button borg1 = findViewById(R.id.borg1);
+        final Button kill = findViewById(R.id.kill);
         final MediaPlayer mediaPlayerEngage = MediaPlayer.create(getApplicationContext(), R.raw.engage);
         final MediaPlayer mediaPlayerBorg1 = MediaPlayer.create(getApplicationContext(), R.raw.borg1);
         engage.setOnClickListener(new View.OnClickListener() {
@@ -34,6 +35,11 @@ public class Home extends Activity {
                 }
                 mediaPlayerEngage.start();
                 System.out.println("duration track: " + duration);
+            }
+        });kill.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                if (mediaPlayerEngage.isPlaying()&&mediaPlayerBorg1) {
+mediaPlayerBorg1.stop();mediaPlayerEngage.stop();
             }
         });
 
