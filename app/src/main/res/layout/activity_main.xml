@@ -4,24 +4,25 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="random.projects.startreksoundboard.Home">
+    tools:context="random.projects.startreksoundboard.Home"
+    android:background="@drawable/bg">
 
     <Button
         android:id="@+id/engage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="444dp"
+        android:layout_marginLeft="10dp"
         android:text="Engage!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        android:layout_marginBottom="400dp"
         android:textAllCaps="false"
-        android:layout_marginLeft="10dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent" />
 
     <Button
         android:id="@+id/borg1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="352dp"
+        android:layout_marginBottom="396dp"
         android:layout_marginLeft="10dp"
         android:text="We are the Borg"
         android:textAllCaps="false"
