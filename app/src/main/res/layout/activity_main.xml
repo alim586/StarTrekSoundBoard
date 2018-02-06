@@ -4,8 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="random.projects.startreksoundboard.Home"
-    android:background="@drawable/bg">
+    android:background="@drawable/bg"
+    android:minWidth="10dp"
+    tools:context="random.projects.startreksoundboard.Home">
 
     <Button
         android:id="@+id/engage"
@@ -13,9 +14,9 @@
         android:layout_height="100dp"
         android:layout_marginBottom="444dp"
         android:layout_marginLeft="10dp"
+        android:background="@layout/round_shape_silver"
         android:text="Engage!"
         android:textAllCaps="false"
-        android:background="@layout/round_shape_silver"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent" />
 
@@ -54,15 +55,16 @@
 
     <Button
         android:id="@+id/kill"
-        android:layout_width="wrap_content"
+        android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_marginBottom="460dp"
-        android:layout_marginLeft="148dp"
-        android:text="Stop"
-        android:textColor="#ACACAC"
-        android:textAllCaps="false"
+        android:layout_marginBottom="448dp"
+        android:layout_marginLeft="280dp"
         android:background="@layout/round_shape"
+        android:text="Stop"
+        android:textAllCaps="false"
+        android:textColor="#ACACAC"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintLeft_toLeftOf="parent" />
 
 </android.support.constraint.ConstraintLayout>
