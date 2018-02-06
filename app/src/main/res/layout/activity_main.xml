@@ -10,11 +10,12 @@
     <Button
         android:id="@+id/engage"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="100dp"
         android:layout_marginBottom="444dp"
         android:layout_marginLeft="10dp"
         android:text="Engage!"
         android:textAllCaps="false"
+        android:background="@layout/round_shape_silver"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent" />
 
@@ -54,11 +55,13 @@
     <Button
         android:id="@+id/kill"
         android:layout_width="wrap_content"
-        android:layout_height="48dp"
+        android:layout_height="100dp"
         android:layout_marginBottom="460dp"
         android:layout_marginLeft="148dp"
         android:text="Stop"
+        android:textColor="#ACACAC"
         android:textAllCaps="false"
+        android:background="@layout/round_shape"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent" />
 
